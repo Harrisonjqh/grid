@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+
+}
+
+body, html{
+  padding:0px;
+  margin:0px;
+  font-family: sans-serif;
+}
+
+.gridContainer{
+  font-size: 8vmin;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: repeat(8,33vh);
+  grid-column-gap:2vmin;
+  grid-row-gap:2vmin;
+  transition: all 2s;
+}
+.gridContainer:hover {
+  color: #7373;
+  border-color: #7373;
+  padding:20vmin;
+}
+
+.item-2x{
+  grid-column-end: span 2;
+  
+  animation: blinkingText 2s infinite;
+}
+
+.item-2x2{
+  grid-column-end: span 2;
+  background-color: #333;
+
+}
+
+@keyframes blinkingText {
+  0%{ color:#7373;  }
+  49%{  color:#7373;  }
+  50%{  color: transparent; }
+  99%{  color: transparent; }
+  100%{  color:#7373; }
+}
